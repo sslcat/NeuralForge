@@ -67,3 +67,15 @@ def test_held_out_learning():
     after = model.metrics(*test)
     assert after["accuracy"] > max(0.9, before["accuracy"] + 0.2)
     assert after["loss"] < before["loss"] / 2
+
+
+def test_validation_labels_do_not_change_training():
+    train, (x, y), _ = spirals(per_class=30)
+    original, flipped = MLP([2, 5, 2]), MLP([2, 5, 2])
+    history = fit(original, train, (x, y), epochs=5)
+    altered = fit(flipped, train, (x, 1 - y), epochs=5)
+    assert len(history) == len(altered) == 6
+    assert history[-1]["validation"]["loss"] != altered[-1]["validation"]["loss"]
+    for a, b in zip(original.layers, flipped.layers, strict=True):
+        for parameter, other in zip(a, b, strict=True):
+            np.testing.assert_array_equal(parameter, other)
