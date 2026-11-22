@@ -1,0 +1,86 @@
+{
+  "python": "3.13.1",
+  "numpy": "2.5.5",
+  "settings": {
+    "epochs": 100,
+    "batch_size": 64,
+    "method": "adam",
+    "lr": 0.01,
+    "seed": 7
+  },
+  "architecture": [
+    2,
+    32,
+    32,
+    2
+  ],
+  "activation": "tanh",
+  "data_seed": 41,
+  "init_seed": 17,
+  "numpy_fit_seconds": 0.15670710000267718,
+  "gradient_check": {
+    "parameters": 35,
+    "max_absolute": 9.791474922526966e-12,
+    "relative_l2": 1.4041925538872387e-10
+  },
+  "initial_test": {
+    "loss": 0.677068514695918,
+    "accuracy": 0.56
+  },
+  "final_test": {
+    "loss": 0.00037358067633467315,
+    "accuracy": 1.0
+  },
+  "first_epoch_95_val": 4,
+  "experiments": [
+    {
+      "width": 32,
+      "lr": 0.01,
+      "method": "adam",
+      "loss": 0.015535179660289859,
+      "accuracy": 0.995
+    },
+    {
+      "width": 32,
+      "lr": 0.001,
+      "method": "adam",
+      "loss": 0.02585317812904634,
+      "accuracy": 0.99
+    },
+    {
+      "width": 32,
+      "lr": 0.03,
+      "method": "adam",
+      "loss": 0.02301526163120444,
+      "accuracy": 0.995
+    },
+    {
+      "width": 8,
+      "lr": 0.01,
+      "method": "adam",
+      "loss": 0.03869163154206757,
+      "accuracy": 0.99
+    },
+    {
+      "width": 64,
+      "lr": 0.01,
+      "method": "adam",
+      "loss": 0.023054833704474788,
+      "accuracy": 0.995
+    },
+    {
+      "width": 32,
+      "lr": 0.01,
+      "method": "sgd",
+      "loss": 0.363152492510928,
+      "accuracy": 0.94
+    }
+  ],
+  "reference": {
+    "loss": 0.0003735806763346742,
+    "accuracy": 1.0,
+    "max_logit_difference": 8.881784197001252e-15,
+    "torch_version": "2.15.0+cpu"
+  },
+  "pipeline_seconds": 5.450983799993992
+}
