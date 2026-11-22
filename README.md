@@ -71,3 +71,11 @@ I repeated the full run in a fresh Python 3.13.1 environment on Windows. The met
 ## Limitations
 
 These are synthetic spirals with a fixed number of turns and a fixed noise model. There are only 200 test points per run, so a single mistake moves accuracy by half a percentage point. Five runs give a rough sense of variability under this generator. They say little about heavier noise, new spiral shapes or real data. In particular, the confident colors far outside the two arms have few nearby observations to support them.
+
+### Let's Connect
+
+I built NeuralForge to better understand how neural networks learn, from the mathematics behind backpropagation to the actual training process.
+
+If you're interested in the implementation, the experiments, or the mathematics, I'm happy to walk through the project, explain how it works, and discuss what I learned.
+
+Feel free to [reach out](https://github.com/sslcat)!
