@@ -4,7 +4,7 @@ I wanted to understand how neural networks learn, so I built a small one from sc
 
 ![The untrained boundary cuts across the spiral arms. After training, it curves through the gap between the same test points.](results/boundaries.png)
 
-These are predictions from the original run. Circles and triangles show the true labels of the 200 test points. The black line is where the two output probabilities are equal. I used AI coding assistance to implement, test and document the project.
+These are predictions from the original run. Circles and triangles show the true labels of the 200 test points. The black line is where the two output probabilities are equal.
 
 ## What the hidden layers buy
 
@@ -72,10 +72,8 @@ I repeated the full run in a fresh Python 3.13.1 environment on Windows. The met
 
 These are synthetic spirals with a fixed number of turns and a fixed noise model. There are only 200 test points per run, so a single mistake moves accuracy by half a percentage point. Five runs give a rough sense of variability under this generator. They say little about heavier noise, new spiral shapes or real data. In particular, the confident colors far outside the two arms have few nearby observations to support them.
 
-### Let's Connect
+## Let's Connect
 
-I built NeuralForge to better understand how neural networks learn, from the mathematics behind backpropagation to the actual training process.
+If you’re curious about what happens between a forward pass and a weight update, I’d be glad to walk through the math of backpropagation and gradient descent and show how those steps map to NumPy. I can explain why I built a small implementation, how I checked it against finite differences and PyTorch, and what the spiral experiments taught me about verification and its limits.
 
-If you're interested in the implementation, the experiments, or the mathematics, I'm happy to walk through the project, explain how it works, and discuss what I learned.
-
-Feel free to [reach out](https://github.com/sslcat)!
+I’d enjoy hearing how you approach those checks. [Reach me on GitHub](https://github.com/sslcat).
